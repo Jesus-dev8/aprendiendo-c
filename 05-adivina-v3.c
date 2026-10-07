@@ -10,7 +10,7 @@ int main(void)
     srand(time(NULL)); // nueva semilla para que el numero no sea el mismo en cada ejecucion
 
     int secretint = rand() % 11; // ahora es random del 0 al 10
-    int intento;
+    int intento = -1; // elimina ahora posibilidad de comparar con basura
 
     while (intento != secretint)
     {
