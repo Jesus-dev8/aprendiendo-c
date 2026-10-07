@@ -1,8 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(void)
 {
-    int secretint = 3; // antes era 2
+
+    printf("pensando en un numero...\n\n\n"); // experiencia de usuario
+
+    srand(time(NULL)); // nueva semilla para que el numero no sea el mismo en cada ejecucion
+
+    int secretint = rand() % 11; // ahora es random del 0 al 10
     int intento;
 
     while (intento != secretint)
@@ -19,11 +26,11 @@ int main(void)
         {
             printf("Te dije del 0 al 10 :/\n");
         }
-        else if (intento < secretint)
+        else if (intento < secretint) // condicion si no adivinas y es mas alto
         {
             printf("nah te falto, es mas alto\n");
         } 
-        else
+        else // misma condicion pero si es mas bajo
         {
             printf("nah te pasaste, es mas bajo\n");
         }
