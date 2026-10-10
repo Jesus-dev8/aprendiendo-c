@@ -92,10 +92,8 @@ int main(void)
         Aunque se pudieron mejorar las condiciones poniendo las primeras tres opciones
         (1, 2, 3) y si no se seleccionaba ninguna es porque ya era menor que 1 o 
         mayor que 3
-        */ //prueba de comentarios abiertos
-        
+        */ 
     }
-    
     return 0; // se me olvido
 }
 
