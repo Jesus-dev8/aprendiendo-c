@@ -56,7 +56,14 @@ int main(void)
         {
             system("cls");
             printf("Temperatura en Celsius: ");
-            scanf(" %f", &grados);
+            if (scanf(" %f", &grados) != 1) 
+            {
+                while (getchar() != '\n');
+
+                system("cls");
+                printf("Entrada invalida. Escribe un numero.\n\n");
+                continue; // toca volver al inicio porque volver aqui es muy complicado
+            }
             printf("\nTemperatura en Fahrenheit: %.2f\n\n", celtofaren(grados));
             printf("Presiona Enter para continuar...");
             while (getchar() != '\n'); // lo mismo de abajo
@@ -67,7 +74,14 @@ int main(void)
         {
             system("cls");
             printf("Temperatura en fahrenheit: ");
-            scanf(" %f", &grados);
+            if (scanf(" %f", &grados) != 1) 
+            {
+                while (getchar() != '\n');
+
+                system("cls");
+                printf("Entrada invalida. Escribe un numero.\n\n");
+                continue; // toca volver al inicio porque volver aqui es muy complicado
+            }
             printf("\nTemperatura en Celsius: %.2f\n\n", farentocel(grados));
             printf("Presiona Enter para continuar...");
             while (getchar() != '\n'); // lee caracter y mientras no sea \n repite
@@ -82,6 +96,7 @@ int main(void)
         
     }
     
+    return 0; // se me olvido
 }
 
 float farentocel(float fahrenheit) // Definicion de la funcion despues de main, usando un prototipo.
